@@ -23,7 +23,7 @@ struct SettingsView: View {
                         }
                     }
                 }
-                .scrollContentBackground(.hidden)
+                .hideScrollContentBackground()
             }
             .navigationTitle("Settings")
         }

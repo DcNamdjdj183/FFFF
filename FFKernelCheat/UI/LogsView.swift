@@ -34,7 +34,7 @@ struct LogsView: View {
                             }
                             .id(entry.id)
                         }
-                        .scrollContentBackground(.hidden)
+                        .hideScrollContentBackground()
                         .onChange(of: logger.logs.count) { _ in
                             if let last = filtered.last {
                                 proxy.scrollTo(last.id, anchor: .bottom)

@@ -39,7 +39,7 @@ struct FeaturesView: View {
                     }
                     .listRowBackground(Color.white.opacity(0.05))
                 }
-                .scrollContentBackground(.hidden)
+                .hideScrollContentBackground()
             }
             .navigationTitle("Features")
         }
