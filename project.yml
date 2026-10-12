@@ -1,0 +1,34 @@
+name: FFKernelCheat
+options:
+  bundleIdPrefix: com.dinhducnam
+  deploymentTarget:
+    iOS: "15.0"
+targets:
+  FFKernelCheat:
+    type: application
+    platform: iOS
+    deploymentTarget: "15.0"
+    sources:
+      - path: FFKernelCheat
+      - path: exploit
+      - path: kexploit
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.dinhducnam.ffkernelcheat
+        PRODUCT_NAME: "FFKernelCheat"
+        INFOPLIST_FILE: FFKernelCheat/Info.plist
+        GENERATE_INFOPLIST_FILE: "NO"
+        SWIFT_VERSION: "5.0"
+        SWIFT_OBJC_BRIDGING_HEADER: FFKernelCheat/Bridging-Header.h
+        HEADER_SEARCH_PATHS:
+          - $(SRCROOT)
+          - $(SRCROOT)/exploit/include
+          - $(SRCROOT)/kexploit/include
+        CODE_SIGN_IDENTITY: ""
+        CODE_SIGNING_REQUIRED: "NO"
+        CODE_SIGNING_ALLOWED: "NO"
+schemes:
+  FFKernelCheat:
+    build:
+      targets:
+        FFKernelCheat: all
